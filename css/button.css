@@ -1,0 +1,52 @@
+/* ============================================================
+   button.css —— 第 7 层：组件「按钮」及它的反馈文字
+   ------------------------------------------------------------
+   顺带示范一件事：这个文件排在 content.css 之后，
+   所以下面的 .hint 能覆盖掉 content.css 里 p 的规则。
+   这就是"引入顺序 = 优先级"的实例，也是拆文件最容易踩的坑。
+   （另外：类选择器 .hint 比标签选择器 p 的优先级本身也更高，
+    两个原因叠在一起，它一定会赢。）
+   ============================================================ */
+
+.btn {
+  /* 按钮默认是行内元素，行内元素设不了上下 padding。
+     inline-block 让它既能坐在文字流里，又能当"盒子"用。 */
+  display: inline-block;
+
+  padding: 12px 28px;
+  background: var(--color-primary);
+  color: var(--color-surface);
+
+  /* 按钮天生自带边框，清掉 */
+  border: none;
+  border-radius: var(--radius-pill);
+
+  font-size: 15px;
+  /* 表单控件不会自动继承 body 的字体，必须手动继承一次 */
+  font-family: inherit;
+
+  /* 鼠标移上去变成小手，明确告诉用户"这东西能点" */
+  cursor: pointer;
+
+  /* transition：属性变化时用 0.25 秒做过渡，而不是瞬间跳变 */
+  transition: background 0.25s;
+}
+
+.btn:hover {
+  background: var(--color-primary-dark);
+}
+
+/* --- 按钮所在的区块 --- */
+/* 原本这是写在 HTML 上的 style="text-align: center"。
+   拆文件时顺手搬到了 CSS 里 —— HTML 里不该出现样式。 */
+.cta {
+  text-align: center;
+}
+
+/* --- 按钮下方那行小字：点击后的反馈 --- */
+/* 同样是从 HTML 的 style 属性搬过来的。 */
+.hint {
+  margin-top: 12px;
+  font-size: 14px;
+  color: var(--color-text-hint);
+}

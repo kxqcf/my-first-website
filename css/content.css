@@ -1,0 +1,42 @@
+/* ============================================================
+   content.css —— 第 6 层：正文排版（标题 / 段落 / 列表）
+   ------------------------------------------------------------
+   这里用的是"标签选择器"（h2、p、ul、li），作用范围是整页。
+   在更大的项目里通常会加上类名限定（比如 .content p），
+   避免影响到页面别处的同名标签。这里页面简单，就先这样写。
+   ============================================================ */
+
+/* 小标题：左边一条竖线，是最省事的"高级感"做法 */
+h2 {
+  font-size: 18px;
+  color: var(--color-primary);
+  margin-bottom: 12px;
+  padding-left: 12px;
+  border-left: 4px solid var(--color-primary);
+}
+
+p {
+  font-size: 15px;
+  color: var(--color-text-body);
+}
+
+/* 列表：去掉浏览器默认的小圆点，改成"一块一块的标签" */
+ul {
+  list-style: none;
+}
+
+li {
+  font-size: 15px;
+  padding: 10px 14px;
+  margin-bottom: 8px;
+  background: var(--color-bg);
+  border-radius: var(--radius-item);
+}
+
+/* ::before 是"伪元素"，在元素内容前面凭空插一段内容。
+   这里插一个对勾，代替被 list-style 去掉的圆点。 */
+li::before {
+  content: "✓ ";
+  color: var(--color-primary);
+  font-weight: bold;
+}
