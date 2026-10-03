@@ -1,25 +1,32 @@
 :root {
-  --color-primary: #4f6df5;
-  --color-primary-dark: #3a55d9;
-  --color-accent: #8b5cf6;
+  --color-primary: #57bfa6;
+  --color-accent: #f7c948;
+  --color-accent-dark: #ffd75e;
+  --color-coral: #f08a8a;
 
-  --color-bg: #f5f6f8;
+  --color-bg: #fdfbf6;
   --color-surface: #ffffff;
-  --color-border: #eeeeee;
+  --color-grid: #f2ede2;
 
-  --color-text: #2b2b2b;
-  --color-text-body: #4a4a4a;
-  --color-text-muted: #999999;
-  --color-text-hint: #888888;
+  --color-tint-green: #d8f0e8;
+  --color-tint-yellow: #fdf0c0;
+  --color-tint-pink: #fbd5d5;
+  --color-tint-mint: #f6fbf9;
 
-  --font-sans: "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  --color-text: #2d2a26;
+  --color-text-body: #4a453e;
+  --color-text-muted: #a89f90;
+  --color-text-hint: #8c8273;
 
-  --content-width: 720px;
+  --font-sans: "楷体", KaiTi, "STKaiti", "幼圆", YouYuan, sans-serif;
+  --font-hand: "方正舒体", FZShuTi, "华文行楷", STXingkai, cursive;
+
   --line-height: 1.8;
 
-  --radius-card: 16px;
-  --radius-item: 8px;
-  --radius-pill: 999px;
+  --content-width: 1560px;
 
-  --shadow-card: 0 8px 30px rgba(0, 0, 0, 0.08);
+  --radius-card: 40px 16px 36px 18px / 18px 34px 16px 40px;
+  --radius-item: 24px 10px 22px 12px / 12px 20px 10px 24px;
+  --radius-small: 16px 7px 14px 8px / 8px 14px 7px 16px;
+  --radius-bar: 10px 5px 8px 6px / 6px 9px 5px 10px;
 }

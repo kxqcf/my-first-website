@@ -1,19 +1,48 @@
 .header {
-  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  background: var(--color-tint-green);
 
-  color: var(--color-surface);
+  color: var(--color-text);
 
-  padding: 48px 32px;
+  padding: 44px 32px;
   text-align: center;
+
+  border-bottom: 3px solid var(--color-primary);
 }
 
 .header h1 {
-  font-size: 28px;
-  margin-bottom: 10px;
+  font-family: var(--font-hand);
+  font-size: 36px;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.header h1::after {
+  content: "";
+  display: block;
+
+  width: 150px;
+  height: 8px;
+
+  margin: 18px auto 0;
+
+  background: var(--color-primary);
+  border-radius: var(--radius-bar);
+
+  opacity: 0.55;
+  transform: rotate(-1.4deg);
 }
 
 .header p {
-  font-size: 15px;
+  font-size: 17px;
+  color: var(--color-text-body);
+}
 
-  opacity: 0.9;
+.header p::before {
+  content: "✦ ";
+  color: var(--color-coral);
+}
+
+.header p::after {
+  content: " ✦";
+  color: var(--color-coral);
 }

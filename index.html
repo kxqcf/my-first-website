@@ -21,6 +21,13 @@
 
 <body>
 
+  <svg width="0" height="0" aria-hidden="true" focusable="false">
+    <filter id="rough">
+      <feTurbulence type="fractalNoise" baseFrequency="0.022" numOctaves="3" result="noise" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="5" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
+  </svg>
+
   <div class="card">
 
     <header class="header">
