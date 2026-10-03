@@ -6,56 +6,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>我的第一个网页 | 从零开始学建站</title>
 
-  <!-- ==========================================================
-       CSS：一共 8 个文件，顺序不能乱！
-       规则是「同等优先级下，后写的覆盖先写的」，所以：
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/content.css">
+  <link rel="stylesheet" href="css/button.css">
+  <link rel="stylesheet" href="css/footer.css">
 
-         1. reset       清零，永远排第一
-         2. variables   定义变量，供后面所有文件取用
-         3. base        定底层字体和背景
-         4~8. 各个组件  各管一块，彼此不打架
-
-       改样式时先看下面的注释找到对应文件，不要在这里加 style。
-       ========================================================== -->
-  <link rel="stylesheet" href="css/reset.css">       <!-- 1. 清零 -->
-  <link rel="stylesheet" href="css/variables.css">   <!-- 2. 变量 -->
-  <link rel="stylesheet" href="css/base.css">        <!-- 3. 基础排版 -->
-  <link rel="stylesheet" href="css/layout.css">      <!-- 4. 布局 -->
-  <link rel="stylesheet" href="css/header.css">      <!-- 5. 顶部区域 -->
-  <link rel="stylesheet" href="css/content.css">     <!-- 6. 正文排版 -->
-  <link rel="stylesheet" href="css/button.css">      <!-- 7. 按钮 -->
-  <link rel="stylesheet" href="css/footer.css">      <!-- 8. 页脚 -->
-
-  <!-- ==========================================================
-       JS：全部加 defer
-       defer 的两个作用：
-         1. 等 HTML 解析完再执行 —— 脚本里才能找到页面元素
-         2. 多个脚本按书写顺序执行 —— main.js 一定在 counter.js 之后
-       加不加 defer，决定了你会不会遇到
-       "Cannot read properties of null" 这类报错。
-       ========================================================== -->
-  <script src="js/counter.js" defer></script>  <!-- 功能：按钮计数 -->
-  <script src="js/main.js" defer></script>     <!-- 入口：启动上面的功能 -->
+  <script src="js/counter.js" defer></script>
+  <script src="js/main.js" defer></script>
 </head>
 
 <body>
 
-  <!-- ==========================================================
-       HTML：只剩「结构」。
-       没有 <style>，没有 <script>，也没有 style="..." 属性。
-       这就是拆分的目的 —— 以后改外观去 css/，改行为去 js/，
-       这个文件只在"增删内容"时才需要打开。
-       ========================================================== -->
-
   <div class="card">
 
-    <!-- 顶部区域（样式在 css/header.css） -->
     <header class="header">
       <h1>你好，我是正在学建站的人 👋</h1>
       <p>这是我写下的第一个网页，也是我成为"大佬"的第 1 天。</p>
     </header>
 
-    <!-- 正文区域（样式在 css/content.css） -->
     <main class="content">
 
       <section>
@@ -85,8 +57,6 @@
         </ul>
       </section>
 
-      <!-- 按钮区和它下面的反馈文字（样式在 css/button.css）
-           原来写在这里的 style="..." 已经搬进 CSS 文件了。 -->
       <section class="cta">
         <button class="btn" id="hiBtn">点我一下</button>
         <p class="hint" id="hiText">按钮还没被点过。</p>
@@ -94,7 +64,6 @@
 
     </main>
 
-    <!-- 页脚（样式在 css/footer.css） -->
     <footer class="footer">
       2026 · 一个 HTML + 8 个 CSS + 2 个 JS，从最小的项目开始
     </footer>
